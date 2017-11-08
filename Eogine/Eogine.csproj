@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +42,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Controls\Caption\EoCaption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Caption\EoCaption.Designer.cs">
+      <DependentUpon>EoCaption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoForm.Designer.cs">
+      <DependentUpon>EoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EogineManager.cs" />
+    <Compile Include="Event\EoDelegate.cs" />
+    <Compile Include="Util\ProcessChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\Controls\Caption\EoCaption.resx">
+      <DependentUpon>EoCaption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Form\EoForm.resx">
+      <DependentUpon>EoForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
