@@ -42,11 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\Controls\Caption\EoCaption.cs">
+    <Compile Include="GUI\Controls\Button\EoButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Controls\Caption\EoCaption.Designer.cs">
+    <Compile Include="GUI\Controls\Button\EoButton.Designer.cs">
+      <DependentUpon>EoButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoCaption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoCaption.Designer.cs">
       <DependentUpon>EoCaption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoControlBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoControlBox.Designer.cs">
+      <DependentUpon>EoControlBox.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Controls\Form\EoForm.cs">
       <SubType>Form</SubType>
@@ -56,16 +68,68 @@
     </Compile>
     <Compile Include="EogineManager.cs" />
     <Compile Include="Event\EoDelegate.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Util\ProcessChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\Controls\Caption\EoCaption.resx">
+    <EmbeddedResource Include="GUI\Controls\Button\EoButton.resx">
+      <DependentUpon>EoButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Form\EoCaption.resx">
       <DependentUpon>EoCaption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Form\EoControlBox.resx">
+      <DependentUpon>EoControlBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Controls\Form\EoForm.resx">
       <DependentUpon>EoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_close_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_close_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_close_pre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_max_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_max_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_max_pre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_minisize_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_minisize_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_minisize_pre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_smallsize_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_smallsize_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlBox\controlbox_smallsize_pre.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -28,24 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelControlBox = new System.Windows.Forms.Panel();
             this.panelIcon = new System.Windows.Forms.Panel();
             this.panelCaption = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.panelControlBox = new Eogine.GUI.Controls.Form.EoControlBox();
             this.panelCaption.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelControlBox
-            // 
-            this.panelControlBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControlBox.Location = new System.Drawing.Point(450, 0);
-            this.panelControlBox.Margin = new System.Windows.Forms.Padding(0);
-            this.panelControlBox.Name = "panelControlBox";
-            this.panelControlBox.Size = new System.Drawing.Size(150, 30);
-            this.panelControlBox.TabIndex = 0;
-            // 
             // panelIcon
             // 
+            this.panelIcon.BackColor = System.Drawing.Color.Transparent;
             this.panelIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIcon.Location = new System.Drawing.Point(0, 0);
             this.panelIcon.Margin = new System.Windows.Forms.Padding(0);
@@ -55,6 +47,7 @@
             // 
             // panelCaption
             // 
+            this.panelCaption.BackColor = System.Drawing.Color.Transparent;
             this.panelCaption.Controls.Add(this.labelTitle);
             this.panelCaption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCaption.Location = new System.Drawing.Point(30, 0);
@@ -67,36 +60,49 @@
             // 
             this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTitle.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(129)));
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(129)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(10, 3);
+            this.labelTitle.Location = new System.Drawing.Point(10, 6);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(400, 24);
+            this.labelTitle.Size = new System.Drawing.Size(56, 17);
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "Caption";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panelControlBox
+            // 
+            this.panelControlBox.BackColor = System.Drawing.Color.Transparent;
+            this.panelControlBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControlBox.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.panelControlBox.Location = new System.Drawing.Point(450, 0);
+            this.panelControlBox.Name = "panelControlBox";
+            this.panelControlBox.Size = new System.Drawing.Size(150, 30);
+            this.panelControlBox.TabIndex = 3;
             // 
             // EoCaption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.panelCaption);
-            this.Controls.Add(this.panelIcon);
             this.Controls.Add(this.panelControlBox);
+            this.Controls.Add(this.panelIcon);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EoCaption";
             this.Size = new System.Drawing.Size(600, 30);
             this.panelCaption.ResumeLayout(false);
+            this.panelCaption.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelControlBox;
         private System.Windows.Forms.Panel panelIcon;
         private System.Windows.Forms.Panel panelCaption;
         private System.Windows.Forms.Label labelTitle;
+        private GUI.Controls.Form.EoControlBox panelControlBox;
     }
 }

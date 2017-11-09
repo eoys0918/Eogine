@@ -33,33 +33,46 @@
             // 
             // CaptionBar
             // 
-            this.CaptionBar.BackColor = System.Drawing.Color.DimGray;
-            this.CaptionBar.ControlBoxVisible = true;
+            this.CaptionBar.BackColor = System.Drawing.Color.Gray;
+            this.CaptionBar.ControlBoxVisible = false;
             this.CaptionBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CaptionBar.IconVisible = true;
+            this.CaptionBar.IconVisible = false;
             this.CaptionBar.Location = new System.Drawing.Point(0, 0);
             this.CaptionBar.Margin = new System.Windows.Forms.Padding(0);
             this.CaptionBar.Name = "CaptionBar";
-            this.CaptionBar.Size = new System.Drawing.Size(300, 30);
+            this.CaptionBar.Size = new System.Drawing.Size(600, 30);
             this.CaptionBar.TabIndex = 0;
             // 
             // EoForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.CaptionBar);
             this.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EoForm";
             this.Text = "EoForm";
-            this.Resize += new System.EventHandler(this.EoForm_Resize);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private EoCaption CaptionBar;
+        public EoCaption CaptionBar;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }

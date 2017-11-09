@@ -30,11 +30,19 @@
         {
             this.SuspendLayout();
             // 
+            // CaptionBar
+            // 
+            this.CaptionBar.ControlBoxVisible = true;
+            this.CaptionBar.Size = new System.Drawing.Size(300, 30);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CaptionEnable = true;
             this.ClientSize = new System.Drawing.Size(300, 300);
+            this.ControlBoxVisible = true;
+            this.FormSize = new System.Drawing.Size(300, 300);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
@@ -42,5 +50,7 @@
         }
 
         #endregion
+
+
     }
 }
