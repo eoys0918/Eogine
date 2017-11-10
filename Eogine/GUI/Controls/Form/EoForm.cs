@@ -18,6 +18,12 @@ namespace Eogine
             get { return this.CaptionBar.Visible; }
             set { this.CaptionBar.Visible = value; }
         }
+        [Category("Caption"), Description("Caption Text")]
+        public string CaptionText
+        {
+            get { return this.CaptionBar.CaptionText; }
+            set { this.CaptionBar.CaptionText = value; }
+        }
         [Category("Caption"), Description("Icon Visible")]
         public bool IconVisible
         {

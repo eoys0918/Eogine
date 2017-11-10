@@ -35,6 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionEnable = true;
+            this.CaptionText = "테스트";
             this.ClientSize = new System.Drawing.Size(300, 300);
             this.ControlBoxVisible = true;
             this.FormSize = new System.Drawing.Size(300, 300);

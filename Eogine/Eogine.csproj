@@ -42,23 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Controls\Form\EoFormCaption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoFormCaption.designer.cs">
+      <DependentUpon>EoFormCaption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoFormControlBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Form\EoFormControlBox.designer.cs">
+      <DependentUpon>EoFormControlBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Controls\Button\EoButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Controls\Button\EoButton.Designer.cs">
       <DependentUpon>EoButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Controls\Form\EoCaption.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Controls\Form\EoCaption.Designer.cs">
-      <DependentUpon>EoCaption.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Controls\Form\EoControlBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Controls\Form\EoControlBox.Designer.cs">
-      <DependentUpon>EoControlBox.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Controls\Form\EoForm.cs">
       <SubType>Form</SubType>
@@ -77,14 +77,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\Controls\Form\EoFormCaption.resx">
+      <DependentUpon>EoFormCaption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Form\EoFormControlBox.resx">
+      <DependentUpon>EoFormControlBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Controls\Button\EoButton.resx">
       <DependentUpon>EoButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Controls\Form\EoCaption.resx">
-      <DependentUpon>EoCaption.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Controls\Form\EoControlBox.resx">
-      <DependentUpon>EoControlBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Controls\Form\EoForm.resx">
       <DependentUpon>EoForm.cs</DependentUpon>

@@ -12,19 +12,27 @@ namespace Eogine
     public partial class EoFormCaption : UserControl
     {
         #region 속성
-        [Category("Layout"), Description("ControlBox Visible")]
+        [Category("Caption"), Description("ControlBox Visible")]
         public bool ControlBoxVisible
         {
             get { return this.ControlBox.Visible; }
             set { this.ControlBox.Visible = value; }
         }
 
-        [Category("Layout"), Description("Icon Visible")]
+        [Category("Caption"), Description("Icon Visible")]
         public bool IconVisible
         {
             get { return this.panelIcon.Visible; }
             set { this.panelIcon.Visible = value; }
         }
+
+        [Category("Caption"), Description("Caption Text")]
+        public string CaptionText
+        {
+            get { return this.labelTitle.Text; }
+            set { this.labelTitle.Text = value; }
+        }
+
         #endregion
 
         public EoFormCaption()
@@ -33,15 +41,15 @@ namespace Eogine
             this.DoubleBuffered = true;
         }
 
-        public void Init(Control main)
+        public void Init(Form main)
         {
-            this.mMainControl = main;
+            this.mMainForm = main;
             InitMove();
             this.ControlBox.Init(main);
         }
 
         #region Move
-        private Control mMainControl = null;
+        private Form mMainForm = null;
         private bool bMove = false;
         private Point mClickPoint;
         private void InitMove()
@@ -55,19 +63,19 @@ namespace Eogine
         }
         private void StartMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && this.mMainControl != null)
+            if (e.Button == MouseButtons.Left && this.mMainForm != null)
             {
                 bMove = true;
-                mClickPoint.X = Cursor.Position.X - mMainControl.Left;
-                mClickPoint.Y = Cursor.Position.Y - mMainControl.Top;
+                mClickPoint.X = Cursor.Position.X - mMainForm.Left;
+                mClickPoint.Y = Cursor.Position.Y - mMainForm.Top;
             }
         }
         private void UpdateMove(object sender, MouseEventArgs e)
         {
-            if (this.mMainControl != null && bMove)
+            if (this.mMainForm != null && bMove)
             {
-                mMainControl.Left = Cursor.Position.X - mClickPoint.X;
-                mMainControl.Top = Cursor.Position.Y - mClickPoint.Y;
+                mMainForm.Left = Cursor.Position.X - mClickPoint.X;
+                mMainForm.Top = Cursor.Position.Y - mClickPoint.Y;
             }
         }
         private void StopMove(object sender, MouseEventArgs e)

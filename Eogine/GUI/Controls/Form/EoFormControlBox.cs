@@ -8,20 +8,20 @@ using System.Text;
 using System.Windows.Forms;
 using Eogine.Properties;
 
-namespace Eogine.GUI.Controls.Form
+namespace Eogine
 {
     public partial class EoFormControlBox : UserControl
     {
-        private Control mMainControl = null;
+        private Form mMainForm = null;
 
         public EoFormControlBox()
         {
             InitializeComponent();
         }
 
-        public void Init(Control main)
+        public void Init(Form main)
         {
-            this.mMainControl = main;
+            this.mMainForm = main;
             InitButtons();
         }
 
@@ -30,42 +30,36 @@ namespace Eogine.GUI.Controls.Form
             
         }
 
-        public event EoDelegate.VoidEvent MinClick;
         private void MinButton_Click(object sender, EventArgs e)
         {
-            if(this.mMainControl != null)
+            if(this.mMainForm != null)
             {
-
-            }
-            if(MinClick != null)
-            {
-                MinClick(sender, e);
+                this.mMainForm.WindowState = FormWindowState.Minimized;
             }
         }
 
-        public event EoDelegate.VoidEvent MaxClick;
+        private bool isMaxized = false;
         private void MaxButton_Click(object sender, EventArgs e)
         {
-            if (this.mMainControl != null)
+            if (this.mMainForm != null)
             {
-
-            }
-            if (MaxClick != null)
-            {
-                MaxClick(sender, e);
+                if (isMaxized)
+                {
+                    this.mMainForm.WindowState = FormWindowState.Normal;
+                }
+                else
+                {
+                    this.mMainForm.WindowState = FormWindowState.Maximized;
+                }
+                isMaxized = !isMaxized;
             }
         }
 
-        public event EoDelegate.VoidEvent CloseClick;
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            if (this.mMainControl != null)
+            if (this.mMainForm != null)
             {
-                
-            }
-            if (CloseClick != null)
-            {
-                CloseClick(sender, e);
+                this.mMainForm.Close();
             }
         }
     }

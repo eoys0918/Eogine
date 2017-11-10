@@ -1,4 +1,4 @@
-﻿namespace Eogine.GUI.Controls.Form
+﻿namespace Eogine
 {
     partial class EoFormControlBox
     {
@@ -105,8 +105,8 @@
 
         #endregion
 
-        private EoButton MaxButton;
-        private EoButton MinButton;
-        private EoButton CloseButton;
+        public EoButton MaxButton;
+        public EoButton MinButton;
+        public EoButton CloseButton;
     }
 }

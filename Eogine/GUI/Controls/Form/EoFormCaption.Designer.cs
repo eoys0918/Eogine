@@ -31,7 +31,7 @@
             this.panelIcon = new System.Windows.Forms.Panel();
             this.panelCaption = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.ControlBox = new Eogine.GUI.Controls.Form.EoFormControlBox();
+            this.ControlBox = new Eogine.EoFormControlBox();
             this.panelCaption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +105,6 @@
         private System.Windows.Forms.Panel panelIcon;
         private System.Windows.Forms.Panel panelCaption;
         private System.Windows.Forms.Label labelTitle;
-        private GUI.Controls.Form.EoFormControlBox ControlBox;
+        private EoFormControlBox ControlBox;
     }
 }
