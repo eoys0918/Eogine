@@ -43,7 +43,7 @@ namespace Eogine
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            this.CaptionBar.InitMove(this);
+            this.CaptionBar.Init(this);
         }
 
         #region resize

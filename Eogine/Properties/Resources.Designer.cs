@@ -93,6 +93,16 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap controlbox_max_dim {
+            get {
+                object obj = ResourceManager.GetObject("controlbox_max_dim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap controlbox_max_nor {
             get {
                 object obj = ResourceManager.GetObject("controlbox_max_nor", resourceCulture);
@@ -103,9 +113,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_max_over {
+        internal static System.Drawing.Bitmap controlbox_max_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_max_over", resourceCulture);
+                object obj = ResourceManager.GetObject("controlbox_max_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_max_pre {
+        internal static System.Drawing.Bitmap controlbox_minisize_dim {
             get {
-                object obj = ResourceManager.GetObject("controlbox_max_pre", resourceCulture);
+                object obj = ResourceManager.GetObject("controlbox_minisize_dim", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_minisize_over {
+        internal static System.Drawing.Bitmap controlbox_minisize_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_minisize_over", resourceCulture);
+                object obj = ResourceManager.GetObject("controlbox_minisize_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +153,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_minisize_pre {
+        internal static System.Drawing.Bitmap controlbox_smallsize_dim {
             get {
-                object obj = ResourceManager.GetObject("controlbox_minisize_pre", resourceCulture);
+                object obj = ResourceManager.GetObject("controlbox_smallsize_dim", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,19 +173,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_smallsize_over {
+        internal static System.Drawing.Bitmap controlbox_smallsize_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_smallsize_over", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap controlbox_smallsize_pre {
-            get {
-                object obj = ResourceManager.GetObject("controlbox_smallsize_pre", resourceCulture);
+                object obj = ResourceManager.GetObject("controlbox_smallsize_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

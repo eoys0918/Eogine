@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Eogine
 {
-    public partial class EoCaption : UserControl
+    public partial class EoFormCaption : UserControl
     {
         #region 속성
         [Category("Layout"), Description("ControlBox Visible")]
@@ -27,20 +27,26 @@ namespace Eogine
         }
         #endregion
 
-        public EoCaption()
+        public EoFormCaption()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
+        }
+
+        public void Init(Control main)
+        {
+            this.mMainControl = main;
+            InitMove();
+            this.ControlBox.Init(main);
         }
 
         #region Move
         private Control mMainControl = null;
         private bool bMove = false;
         private Point mClickPoint;
-        public void InitMove(Control main)
+        private void InitMove()
         {
-            this.mMainControl = main;
-            foreach(Control c in this.Controls)
+            foreach (Control c in this.Controls)
             {
                 c.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StartMove);
                 c.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UpdateMove);

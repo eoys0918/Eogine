@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CaptionBar = new Eogine.EoCaption();
+            this.CaptionBar = new Eogine.EoFormCaption();
             this.SuspendLayout();
             // 
             // CaptionBar
@@ -59,7 +59,7 @@
 
         #endregion
 
-        private EoCaption CaptionBar;
+        private EoFormCaption CaptionBar;
 
 
 

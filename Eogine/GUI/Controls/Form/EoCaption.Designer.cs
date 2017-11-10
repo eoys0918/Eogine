@@ -1,6 +1,6 @@
 ﻿namespace Eogine
 {
-    partial class EoCaption
+    partial class EoFormCaption
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -31,7 +31,7 @@
             this.panelIcon = new System.Windows.Forms.Panel();
             this.panelCaption = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.ControlBox = new Eogine.GUI.Controls.Form.EoControlBox();
+            this.ControlBox = new Eogine.GUI.Controls.Form.EoFormControlBox();
             this.panelCaption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@
             this.ControlBox.Size = new System.Drawing.Size(90, 30);
             this.ControlBox.TabIndex = 5;
             // 
-            // EoCaption
+            // EoFormCaption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +92,7 @@
             this.Controls.Add(this.ControlBox);
             this.Controls.Add(this.panelIcon);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "EoCaption";
+            this.Name = "EoFormCaption";
             this.Size = new System.Drawing.Size(600, 30);
             this.panelCaption.ResumeLayout(false);
             this.panelCaption.PerformLayout();
@@ -105,6 +105,6 @@
         private System.Windows.Forms.Panel panelIcon;
         private System.Windows.Forms.Panel panelCaption;
         private System.Windows.Forms.Label labelTitle;
-        private GUI.Controls.Form.EoControlBox ControlBox;
+        private GUI.Controls.Form.EoFormControlBox ControlBox;
     }
 }
