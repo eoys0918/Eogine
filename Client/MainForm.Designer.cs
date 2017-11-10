@@ -30,11 +30,6 @@
         {
             this.SuspendLayout();
             // 
-            // CaptionBar
-            // 
-            this.CaptionBar.ControlBoxVisible = true;
-            this.CaptionBar.Size = new System.Drawing.Size(300, 30);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);

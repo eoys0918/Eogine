@@ -35,66 +35,74 @@
             // 
             // MinButton
             // 
+            this.MinButton.BackColor = System.Drawing.Color.Transparent;
+            this.MinButton.BackgroundImage = global::Eogine.Properties.Resources.controlbox_minisize_nor;
+            this.MinButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.MinButton.ButtonType = Eogine.EoButton.TYPE.IMAGE;
-            this.MinButton.DefaultImage = null;
+            this.MinButton.DefaultImage = global::Eogine.Properties.Resources.controlbox_minisize_nor;
             this.MinButton.DisabledImage = null;
-            this.MinButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.MinButton.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.MinButton.Location = new System.Drawing.Point(60, 0);
-            this.MinButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MinButton.Location = new System.Drawing.Point(6, 6);
+            this.MinButton.Margin = new System.Windows.Forms.Padding(6);
             this.MinButton.Name = "MinButton";
-            this.MinButton.OverImage = null;
-            this.MinButton.SelectedImage = null;
-            this.MinButton.Size = new System.Drawing.Size(30, 30);
+            this.MinButton.OverImage = global::Eogine.Properties.Resources.controlbox_minisize_over;
+            this.MinButton.SelectedImage = global::Eogine.Properties.Resources.controlbox_minisize_pre;
+            this.MinButton.Size = new System.Drawing.Size(18, 18);
             this.MinButton.TabIndex = 2;
             // 
             // MaxButton
             // 
+            this.MaxButton.BackColor = System.Drawing.Color.Transparent;
+            this.MaxButton.BackgroundImage = global::Eogine.Properties.Resources.controlbox_max_nor;
+            this.MaxButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.MaxButton.ButtonType = Eogine.EoButton.TYPE.IMAGE;
-            this.MaxButton.DefaultImage = null;
+            this.MaxButton.DefaultImage = global::Eogine.Properties.Resources.controlbox_max_nor;
             this.MaxButton.DisabledImage = null;
-            this.MaxButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.MaxButton.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.MaxButton.Location = new System.Drawing.Point(90, 0);
-            this.MaxButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MaxButton.Location = new System.Drawing.Point(36, 6);
+            this.MaxButton.Margin = new System.Windows.Forms.Padding(6);
             this.MaxButton.Name = "MaxButton";
-            this.MaxButton.OverImage = null;
-            this.MaxButton.SelectedImage = null;
-            this.MaxButton.Size = new System.Drawing.Size(30, 30);
+            this.MaxButton.OverImage = global::Eogine.Properties.Resources.controlbox_max_over;
+            this.MaxButton.SelectedImage = global::Eogine.Properties.Resources.controlbox_max_pre;
+            this.MaxButton.Size = new System.Drawing.Size(18, 18);
             this.MaxButton.TabIndex = 1;
             // 
             // CloseButton
             // 
+            this.CloseButton.BackColor = System.Drawing.Color.Transparent;
+            this.CloseButton.BackgroundImage = global::Eogine.Properties.Resources.controlbox_close_nor;
+            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CloseButton.ButtonType = Eogine.EoButton.TYPE.IMAGE;
-            this.CloseButton.DefaultImage = null;
+            this.CloseButton.DefaultImage = global::Eogine.Properties.Resources.controlbox_close_nor;
             this.CloseButton.DisabledImage = null;
-            this.CloseButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.CloseButton.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.CloseButton.Location = new System.Drawing.Point(120, 0);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.CloseButton.Location = new System.Drawing.Point(66, 6);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(6);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.OverImage = null;
-            this.CloseButton.SelectedImage = null;
-            this.CloseButton.Size = new System.Drawing.Size(30, 30);
-            this.CloseButton.TabIndex = 0;
+            this.CloseButton.OverImage = global::Eogine.Properties.Resources.controlbox_close_sel;
+            this.CloseButton.SelectedImage = global::Eogine.Properties.Resources.controlbox_close_dim;
+            this.CloseButton.Size = new System.Drawing.Size(18, 18);
+            this.CloseButton.TabIndex = 3;
             // 
             // EoControlBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MinButton);
             this.Controls.Add(this.MaxButton);
             this.Controls.Add(this.CloseButton);
+            this.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EoControlBox";
-            this.Size = new System.Drawing.Size(150, 30);
+            this.Size = new System.Drawing.Size(90, 30);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private EoButton CloseButton;
         private EoButton MaxButton;
         private EoButton MinButton;
+        private EoButton CloseButton;
     }
 }

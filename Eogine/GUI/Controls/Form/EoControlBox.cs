@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Eogine.Properties;
 
 namespace Eogine.GUI.Controls.Form
 {
@@ -14,6 +15,12 @@ namespace Eogine.GUI.Controls.Form
         public EoControlBox()
         {
             InitializeComponent();
+            InitButtons();
+        }
+
+        public void InitButtons()
+        {
+            
         }
     }
 }

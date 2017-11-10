@@ -33,15 +33,15 @@
             // 
             // CaptionBar
             // 
-            this.CaptionBar.BackColor = System.Drawing.Color.Gray;
-            this.CaptionBar.ControlBoxVisible = false;
+            this.CaptionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.CaptionBar.ControlBoxVisible = true;
             this.CaptionBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.CaptionBar.IconVisible = false;
             this.CaptionBar.Location = new System.Drawing.Point(0, 0);
             this.CaptionBar.Margin = new System.Windows.Forms.Padding(0);
             this.CaptionBar.Name = "CaptionBar";
             this.CaptionBar.Size = new System.Drawing.Size(600, 30);
-            this.CaptionBar.TabIndex = 0;
+            this.CaptionBar.TabIndex = 1;
             // 
             // EoForm
             // 
@@ -59,7 +59,9 @@
 
         #endregion
 
-        public EoCaption CaptionBar;
+        private EoCaption CaptionBar;
+
+
 
 
 

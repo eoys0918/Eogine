@@ -15,8 +15,8 @@ namespace Eogine
         [Category("Layout"), Description("ControlBox Visible")]
         public bool ControlBoxVisible
         {
-            get { return this.panelControlBox.Visible; }
-            set { this.panelControlBox.Visible = value; }
+            get { return this.ControlBox.Visible; }
+            set { this.ControlBox.Visible = value; }
         }
 
         [Category("Layout"), Description("Icon Visible")]

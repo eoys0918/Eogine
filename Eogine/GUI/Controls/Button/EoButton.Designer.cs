@@ -34,10 +34,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EoButton";
             this.Size = new System.Drawing.Size(80, 30);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EoButton_MouseDown);
+            this.MouseEnter += new System.EventHandler(this.EoButton_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.EoButton_MouseLeave);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EoButton_MouseUp);
             this.ResumeLayout(false);
 
         }

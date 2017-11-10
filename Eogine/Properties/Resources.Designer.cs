@@ -63,6 +63,16 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap controlbox_close_dim {
+            get {
+                object obj = ResourceManager.GetObject("controlbox_close_dim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap controlbox_close_nor {
             get {
                 object obj = ResourceManager.GetObject("controlbox_close_nor", resourceCulture);
@@ -73,19 +83,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_close_over {
+        internal static System.Drawing.Bitmap controlbox_close_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_close_over", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap controlbox_close_pre {
-            get {
-                object obj = ResourceManager.GetObject("controlbox_close_pre", resourceCulture);
+                object obj = ResourceManager.GetObject("controlbox_close_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

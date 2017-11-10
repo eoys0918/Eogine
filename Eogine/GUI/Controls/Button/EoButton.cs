@@ -25,13 +25,40 @@ namespace Eogine
         }
 
         [Category("Button"), Description("Default Image")]
-        public Image DefaultImage { get; set; }
+        public Image DefaultImage
+        {
+            get { return this.mDefaultImage; }
+            set
+            {
+                this.mDefaultImage = value;
+                this.BackgroundImage = value;
+            }
+        }
+        private Image mDefaultImage;
+
         [Category("Button"), Description("Over Image")]
-        public Image OverImage { get; set; }
+        public Image OverImage
+        {
+            get { return this.mOverImage; }
+            set { this.mOverImage = value; }
+        }
+        private Image mOverImage;
+
         [Category("Button"), Description("Selected Image")]
-        public Image SelectedImage { get; set; }
+        public Image SelectedImage
+        {
+            get { return this.mSelectedImage; }
+            set { this.mSelectedImage = value; }
+        }
+        private Image mSelectedImage;
+
         [Category("Button"), Description("Disabled Image")]
-        public Image DisabledImage { get; set; }
+        public Image DisabledImage
+        {
+            get { return this.mDisabledImage; }
+            set { this.mDisabledImage = value; }
+        }
+        private Image mDisabledImage;
 
         #endregion
 
@@ -54,8 +81,41 @@ namespace Eogine
                     this.BackgroundImage = this.DefaultImage;
                     break;
             }
+            Invalidate();
         }
         #endregion
+
+        private void EoButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.mButtonType == TYPE.IMAGE)
+            {
+                this.BackgroundImage = this.SelectedImage;
+            }
+        }
+        
+        private void EoButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (this.mButtonType == TYPE.IMAGE)
+            {
+                this.BackgroundImage = this.DefaultImage;
+            }
+        }
+
+        private void EoButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (this.mButtonType == TYPE.IMAGE)
+            {
+                this.BackgroundImage = this.OverImage;
+            }
+        }
+
+        private void EoButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (this.mButtonType == TYPE.IMAGE)
+            {
+                this.BackgroundImage = this.DefaultImage;
+            }
+        }
 
     }
 }
