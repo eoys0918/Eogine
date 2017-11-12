@@ -63,9 +63,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_close_dim {
+        internal static System.Drawing.Bitmap checkbox00_18x18_nor {
             get {
-                object obj = ResourceManager.GetObject("controlbox_close_dim", resourceCulture);
+                object obj = ResourceManager.GetObject("checkbox00_18x18_nor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_close_nor {
+        internal static System.Drawing.Bitmap checkbox00_18x18_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_close_nor", resourceCulture);
+                object obj = ResourceManager.GetObject("checkbox00_18x18_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_close_sel {
+        internal static System.Drawing.Bitmap close00_10x10_dim {
             get {
-                object obj = ResourceManager.GetObject("controlbox_close_sel", resourceCulture);
+                object obj = ResourceManager.GetObject("close00_10x10_dim", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_max_dim {
+        internal static System.Drawing.Bitmap close00_10x10_nor {
             get {
-                object obj = ResourceManager.GetObject("controlbox_max_dim", resourceCulture);
+                object obj = ResourceManager.GetObject("close00_10x10_nor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_max_nor {
+        internal static System.Drawing.Bitmap close00_10x10_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_max_nor", resourceCulture);
+                object obj = ResourceManager.GetObject("close00_10x10_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_max_sel {
+        internal static System.Drawing.Bitmap maximize00_10x10_dim {
             get {
-                object obj = ResourceManager.GetObject("controlbox_max_sel", resourceCulture);
+                object obj = ResourceManager.GetObject("maximize00_10x10_dim", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_minisize_dim {
+        internal static System.Drawing.Bitmap maximize00_10x10_nor {
             get {
-                object obj = ResourceManager.GetObject("controlbox_minisize_dim", resourceCulture);
+                object obj = ResourceManager.GetObject("maximize00_10x10_nor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_minisize_nor {
+        internal static System.Drawing.Bitmap maximize00_10x10_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_minisize_nor", resourceCulture);
+                object obj = ResourceManager.GetObject("maximize00_10x10_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_minisize_sel {
+        internal static System.Drawing.Bitmap minimize00_10x10_dim {
             get {
-                object obj = ResourceManager.GetObject("controlbox_minisize_sel", resourceCulture);
+                object obj = ResourceManager.GetObject("minimize00_10x10_dim", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_smallsize_dim {
+        internal static System.Drawing.Bitmap minimize00_10x10_nor {
             get {
-                object obj = ResourceManager.GetObject("controlbox_smallsize_dim", resourceCulture);
+                object obj = ResourceManager.GetObject("minimize00_10x10_nor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_smallsize_nor {
+        internal static System.Drawing.Bitmap minimize00_10x10_sel {
             get {
-                object obj = ResourceManager.GetObject("controlbox_smallsize_nor", resourceCulture);
+                object obj = ResourceManager.GetObject("minimize00_10x10_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,29 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controlbox_smallsize_sel {
+        internal static System.Drawing.Bitmap normalize00_10x10_dim {
             get {
-                object obj = ResourceManager.GetObject("controlbox_smallsize_sel", resourceCulture);
+                object obj = ResourceManager.GetObject("normalize00_10x10_dim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap normalize00_10x10_nor {
+            get {
+                object obj = ResourceManager.GetObject("normalize00_10x10_nor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap normalize00_10x10_sel {
+            get {
+                object obj = ResourceManager.GetObject("normalize00_10x10_sel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -59,5 +59,15 @@ namespace Client.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkbox00_18x18_sel {
+            get {
+                object obj = ResourceManager.GetObject("checkbox00_18x18_sel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

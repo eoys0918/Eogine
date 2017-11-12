@@ -46,8 +46,8 @@
             this.MinButton.Location = new System.Drawing.Point(6, 6);
             this.MinButton.Margin = new System.Windows.Forms.Padding(6);
             this.MinButton.Name = "MinButton";
-            this.MinButton.OverImage = global::Eogine.Properties.Resources.controlbox_minisize_sel;
-            this.MinButton.SelectedImage = global::Eogine.Properties.Resources.controlbox_minisize_dim;
+            this.MinButton.OverImage = global::Eogine.Properties.Resources.minimize00_10x10_sel;
+            this.MinButton.SelectedImage = global::Eogine.Properties.Resources.minimize00_10x10_dim;
             this.MinButton.Size = new System.Drawing.Size(18, 18);
             this.MinButton.TabIndex = 2;
             this.MinButton.Click += new System.EventHandler(this.MinButton_Click);
@@ -64,8 +64,8 @@
             this.MaxButton.Location = new System.Drawing.Point(36, 6);
             this.MaxButton.Margin = new System.Windows.Forms.Padding(6);
             this.MaxButton.Name = "MaxButton";
-            this.MaxButton.OverImage = global::Eogine.Properties.Resources.controlbox_max_sel;
-            this.MaxButton.SelectedImage = global::Eogine.Properties.Resources.controlbox_max_dim;
+            this.MaxButton.OverImage = global::Eogine.Properties.Resources.maximize00_10x10_sel;
+            this.MaxButton.SelectedImage = global::Eogine.Properties.Resources.maximize00_10x10_dim;
             this.MaxButton.Size = new System.Drawing.Size(18, 18);
             this.MaxButton.TabIndex = 1;
             this.MaxButton.Click += new System.EventHandler(this.MaxButton_Click);
@@ -82,8 +82,8 @@
             this.CloseButton.Location = new System.Drawing.Point(66, 6);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(6);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.OverImage = global::Eogine.Properties.Resources.controlbox_close_sel;
-            this.CloseButton.SelectedImage = global::Eogine.Properties.Resources.controlbox_close_dim;
+            this.CloseButton.OverImage = global::Eogine.Properties.Resources.close00_10x10_sel;
+            this.CloseButton.SelectedImage = global::Eogine.Properties.Resources.close00_10x10_dim;
             this.CloseButton.Size = new System.Drawing.Size(18, 18);
             this.CloseButton.TabIndex = 3;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);

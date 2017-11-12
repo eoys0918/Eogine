@@ -118,40 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="controlbox_close_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_close_over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkbox00_18x18_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkbox00_18x18_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_close_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_close_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkbox00_18x18_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkbox00_18x18_sel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_close_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_close_pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close00_10x10_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close00_10x10_dim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_max_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_max_over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close00_10x10_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close00_10x10_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_max_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_max_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close00_10x10_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close00_10x10_sel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_max_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_max_pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maximize00_10x10_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize00_10x10_dim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_minisize_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_minisize_over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maximize00_10x10_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize00_10x10_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_minisize_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_minisize_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maximize00_10x10_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize00_10x10_sel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_minisize_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_minisize_pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize00_10x10_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize00_10x10_dim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_smallsize_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_smallsize_over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize00_10x10_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize00_10x10_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_smallsize_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_smallsize_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize00_10x10_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize00_10x10_sel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="controlbox_smallsize_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ControlBox\controlbox_smallsize_pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="normalize00_10x10_dim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\normalize00_10x10_dim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="normalize00_10x10_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\normalize00_10x10_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="normalize00_10x10_sel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\normalize00_10x10_sel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

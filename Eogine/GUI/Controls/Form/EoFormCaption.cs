@@ -32,7 +32,7 @@ namespace Eogine
             get { return this.labelTitle.Text; }
             set { this.labelTitle.Text = value; }
         }
-
+        
         #endregion
 
         public EoFormCaption()

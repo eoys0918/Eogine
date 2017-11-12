@@ -30,6 +30,23 @@ namespace Eogine
             get { return this.CaptionBar.IconVisible; }
             set { this.CaptionBar.IconVisible = value; }
         }
+        [Category("Caption"), Description("Caption Text")]
+        public Image IconImage
+        {
+            get { return this.CaptionBar.IconButton.DefaultImage; }
+            set
+            {
+                this.CaptionBar.IconButton.DefaultImage = value;
+                if (this.CaptionBar.IconButton.SelectedImage == null)
+                {
+                    this.CaptionBar.IconButton.SelectedImage = value;
+                }
+                if (this.CaptionBar.IconButton.OverImage == null)
+                {
+                    this.CaptionBar.IconButton.OverImage = value;
+                }
+            }
+        }
         [Category("Caption"), Description("ControlBox Visible")]
         public bool ControlBoxVisible
         {

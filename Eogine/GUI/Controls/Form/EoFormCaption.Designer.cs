@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.panelIcon = new System.Windows.Forms.Panel();
+            this.IconButton = new Eogine.EoButton();
             this.panelCaption = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.ControlBox = new Eogine.EoFormControlBox();
+            this.panelIcon.SuspendLayout();
             this.panelCaption.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelIcon
             // 
             this.panelIcon.BackColor = System.Drawing.Color.Transparent;
+            this.panelIcon.Controls.Add(this.IconButton);
             this.panelIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIcon.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.panelIcon.Location = new System.Drawing.Point(0, 0);
@@ -45,6 +48,21 @@
             this.panelIcon.Name = "panelIcon";
             this.panelIcon.Size = new System.Drawing.Size(30, 30);
             this.panelIcon.TabIndex = 1;
+            // 
+            // IconButton
+            // 
+            this.IconButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.IconButton.ButtonType = Eogine.EoButton.TYPE.DEFAULT;
+            this.IconButton.DefaultImage = null;
+            this.IconButton.DisabledImage = null;
+            this.IconButton.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.IconButton.Location = new System.Drawing.Point(6, 6);
+            this.IconButton.Margin = new System.Windows.Forms.Padding(0);
+            this.IconButton.Name = "IconButton";
+            this.IconButton.OverImage = null;
+            this.IconButton.SelectedImage = null;
+            this.IconButton.Size = new System.Drawing.Size(18, 18);
+            this.IconButton.TabIndex = 0;
             // 
             // panelCaption
             // 
@@ -65,7 +83,7 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(10, 6);
+            this.labelTitle.Location = new System.Drawing.Point(10, 8);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(54, 17);
@@ -85,15 +103,17 @@
             // 
             // EoFormCaption
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
             this.Controls.Add(this.panelCaption);
             this.Controls.Add(this.ControlBox);
             this.Controls.Add(this.panelIcon);
+            this.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "EoFormCaption";
             this.Size = new System.Drawing.Size(600, 30);
+            this.panelIcon.ResumeLayout(false);
             this.panelCaption.ResumeLayout(false);
             this.panelCaption.PerformLayout();
             this.ResumeLayout(false);
@@ -105,6 +125,7 @@
         private System.Windows.Forms.Panel panelIcon;
         private System.Windows.Forms.Panel panelCaption;
         private System.Windows.Forms.Label labelTitle;
-        private EoFormControlBox ControlBox;
+        public EoFormControlBox ControlBox;
+        public EoButton IconButton;
     }
 }

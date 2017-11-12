@@ -94,42 +94,50 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_close_nor.png" />
+    <None Include="Resources\normalize00_10x10_dim.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_close_over.png" />
+    <None Include="Resources\normalize00_10x10_nor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_close_pre.png" />
+    <None Include="Resources\normalize00_10x10_sel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_max_nor.png" />
+    <None Include="Resources\checkbox00_18x18_nor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_max_over.png" />
+    <None Include="Resources\checkbox00_18x18_sel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_max_pre.png" />
+    <None Include="Resources\close00_10x10_dim.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_minisize_nor.png" />
+    <None Include="Resources\close00_10x10_nor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_minisize_over.png" />
+    <None Include="Resources\close00_10x10_sel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_minisize_pre.png" />
+    <None Include="Resources\maximize00_10x10_dim.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_smallsize_nor.png" />
+    <None Include="Resources\maximize00_10x10_nor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_smallsize_over.png" />
+    <None Include="Resources\maximize00_10x10_sel.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ControlBox\controlbox_smallsize_pre.png" />
+    <None Include="Resources\minimize00_10x10_dim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize00_10x10_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize00_10x10_sel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\3D\OpenGL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

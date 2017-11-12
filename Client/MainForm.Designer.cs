@@ -36,9 +36,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionEnable = true;
             this.CaptionText = "테스트";
-            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.ClientSize = new System.Drawing.Size(1280, 900);
             this.ControlBoxVisible = true;
-            this.FormSize = new System.Drawing.Size(300, 300);
+            this.FormSize = new System.Drawing.Size(1280, 900);
+            this.IconImage = global::Client.Properties.Resources.checkbox00_18x18_sel;
+            this.IconVisible = true;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
