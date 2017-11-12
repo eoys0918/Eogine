@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eogine", "Eogine\Eogine.csproj", "{8EB1A950-E959-4129-851C-E473F6644921}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EogineEditor", "EogineEditor\EogineEditor.csproj", "{FA073034-1010-43BE-B5ED-51457B7FBF86}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8EB1A950-E959-4129-851C-E473F6644921} = {8EB1A950-E959-4129-851C-E473F6644921}
 	EndProjectSection
@@ -28,16 +28,16 @@ Global
 		{8EB1A950-E959-4129-851C-E473F6644921}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8EB1A950-E959-4129-851C-E473F6644921}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8EB1A950-E959-4129-851C-E473F6644921}.Release|x86.ActiveCfg = Release|Any CPU
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Debug|x86.ActiveCfg = Debug|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Debug|x86.Build.0 = Debug|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Release|Any CPU.ActiveCfg = Release|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Release|Mixed Platforms.Build.0 = Release|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Release|x86.ActiveCfg = Release|x86
-		{EC245C5A-B039-4ECE-AC69-4A3FA9BD0551}.Release|x86.Build.0 = Release|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Debug|x86.ActiveCfg = Debug|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Debug|x86.Build.0 = Debug|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Release|Any CPU.ActiveCfg = Release|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Release|Mixed Platforms.Build.0 = Release|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Release|x86.ActiveCfg = Release|x86
+		{FA073034-1010-43BE-B5ED-51457B7FBF86}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
