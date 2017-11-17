@@ -28,82 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BorderPanel = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
+            Eogine.GLCamera glCamera1 = new Eogine.GLCamera();
+            this.borderPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.glViewport = new Eogine.GLViewport();
-            this.RightPanel = new System.Windows.Forms.Panel();
-            this.BorderPanel.SuspendLayout();
-            this.MainPanel.SuspendLayout();
+            this.borderPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BorderPanel
+            // borderPanel
             // 
-            this.BorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(49)))), ((int)(((byte)(68)))));
-            this.BorderPanel.Controls.Add(this.MainPanel);
-            this.BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BorderPanel.Location = new System.Drawing.Point(0, 30);
-            this.BorderPanel.Name = "BorderPanel";
-            this.BorderPanel.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.BorderPanel.Size = new System.Drawing.Size(1280, 690);
-            this.BorderPanel.TabIndex = 2;
+            this.borderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.borderPanel.Controls.Add(this.mainPanel);
+            this.borderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.borderPanel.Location = new System.Drawing.Point(0, 30);
+            this.borderPanel.Name = "borderPanel";
+            this.borderPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.borderPanel.Size = new System.Drawing.Size(1280, 690);
+            this.borderPanel.TabIndex = 2;
             // 
-            // MainPanel
+            // mainPanel
             // 
-            this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(80)))), ((int)(((byte)(108)))));
-            this.MainPanel.Controls.Add(this.glViewport);
-            this.MainPanel.Controls.Add(this.RightPanel);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(3, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.MainPanel.Size = new System.Drawing.Size(1274, 687);
-            this.MainPanel.TabIndex = 0;
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(66)))), ((int)(((byte)(93)))));
+            this.mainPanel.Controls.Add(this.glViewport);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(3, 3);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.mainPanel.Size = new System.Drawing.Size(1274, 684);
+            this.mainPanel.TabIndex = 0;
             // 
             // glViewport
             // 
+            this.glViewport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.glViewport.BackColor = System.Drawing.Color.Black;
-            this.glViewport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.glViewport.Location = new System.Drawing.Point(3, 3);
+            this.glViewport.BackgroundColor = System.Drawing.Color.Black;
+            this.glViewport.Location = new System.Drawing.Point(9, 7);
             this.glViewport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.glViewport.Name = "glViewport";
-            this.glViewport.Size = new System.Drawing.Size(968, 681);
+            this.glViewport.Size = new System.Drawing.Size(977, 667);
             this.glViewport.TabIndex = 0;
-            this.glViewport.ViewportBackgroundColor = System.Drawing.Color.Black;
+            this.glViewport.ViewportCam = glCamera1;
             this.glViewport.VSync = false;
-            // 
-            // RightPanel
-            // 
-            this.RightPanel.BackColor = System.Drawing.Color.Transparent;
-            this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RightPanel.Location = new System.Drawing.Point(971, 3);
-            this.RightPanel.Name = "RightPanel";
-            this.RightPanel.Size = new System.Drawing.Size(300, 681);
-            this.RightPanel.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CaptionEnable = true;
             this.CaptionText = "Editor";
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.ControlBoxVisible = true;
-            this.Controls.Add(this.BorderPanel);
+            this.Controls.Add(this.borderPanel);
             this.FormClientSize = new System.Drawing.Size(1280, 720);
+            this.IconImage = global::EogineEditor.Properties.Resources.Koala;
+            this.IconVisible = true;
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.Controls.SetChildIndex(this.BorderPanel, 0);
-            this.BorderPanel.ResumeLayout(false);
-            this.MainPanel.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.borderPanel, 0);
+            this.borderPanel.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel BorderPanel;
-        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel borderPanel;
+        private System.Windows.Forms.Panel mainPanel;
         private Eogine.GLViewport glViewport;
-        private System.Windows.Forms.Panel RightPanel;
     }
 }

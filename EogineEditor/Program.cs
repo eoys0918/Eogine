@@ -3,22 +3,86 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Eogine;
+using OpenTK;
+using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
 
 namespace EogineEditor
 {
     static class Program
     {
-        /// <summary>
-        /// 해당 응용 프로그램의 주 진입점입니다.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        class Game : GameWindow
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            if (ProcessChecker.IsOnlyProcess(Application.ProductName))
+            private GLCamera mViewportCam = null;
+            private GLGrid grid = null;
+
+            public Game()
+                : base(800, 600, GraphicsMode.Default, "OpenTK Quick Start Sample")
             {
-                Application.Run(new MainForm());
+                VSync = VSyncMode.On;
+            }
+
+            protected override void OnLoad(EventArgs e)
+            {
+                base.OnLoad(e);
+
+                GL.ClearColor(0.1f, 0.2f, 0.5f, 0.0f);
+                GL.Enable(EnableCap.DepthTest);
+
+                this.mViewportCam = new GLCamera();
+                GL.Viewport(ClientRectangle.X, ClientRectangle.Y, ClientRectangle.Width, ClientRectangle.Height);
+
+                this.mViewportCam.SetPosition(0.0f, 50.0f, -50.0f);
+                this.mViewportCam.SetTarget(0.0f, 0.0f, 0.0f);
+                grid = new GLGrid();
+            }
+
+            protected override void OnResize(EventArgs e)
+            {
+                base.OnResize(e);
+            }
+
+            protected override void OnUpdateFrame(FrameEventArgs e)
+            {
+                base.OnUpdateFrame(e);
+
+            }
+
+            protected override void OnRenderFrame(FrameEventArgs e)
+            {
+                base.OnRenderFrame(e);
+
+                GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+
+                Matrix4 projection = mViewportCam.GetProjection();
+                GL.MatrixMode(MatrixMode.Projection);
+                GL.LoadMatrix(ref projection);
+
+                Matrix4 modelview = mViewportCam.GetView();
+                GL.MatrixMode(MatrixMode.Modelview);
+                GL.LoadMatrix(ref modelview);
+
+                grid.Render();
+
+
+                SwapBuffers();
+            }
+
+            [STAThread]
+            static void Main()
+            {
+                //using (Game game = new Game())
+                //{
+                //    game.Run(30.0);
+                //}
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                if (ProcessChecker.IsOnlyProcess(Application.ProductName))
+                {
+                    Application.Run(new MainForm());
+                }
+
             }
         }
     }

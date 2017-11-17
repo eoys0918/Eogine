@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,15 +30,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\OpenTK.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenTK.Compatibility, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\OpenTK.Compatibility.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -54,38 +53,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\OpenGL\GLManager.cs" />
+    <Compile Include="Event\EoEventControler.cs" />
+    <Compile Include="GUI\OpenGL\Component\GLComponent.cs" />
+    <Compile Include="GUI\OpenGL\Component\GLComponentManager.cs" />
+    <Compile Include="GUI\OpenGL\Component\Move\GLMoveControl.cs" />
+    <Compile Include="GUI\OpenGL\Object\Camera\GLCamera.cs" />
     <Compile Include="GUI\OpenGL\Object\GLObject.cs" />
-    <Compile Include="GUI\OpenGL\Texture\GLTexture2D.cs" />
-    <Compile Include="GUI\OpenGL\Vertex\GLVertex.cs" />
+    <Compile Include="GUI\OpenGL\Object\Grid\GLGrid.cs" />
+    <Compile Include="GUI\OpenGL\Render\GLTexture.cs" />
+    <Compile Include="GUI\OpenGL\Render\GLVertex.cs" />
     <Compile Include="GUI\OpenGL\Viewport\GLViewport.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\OpenGL\Viewport\GLViewport.Designer.cs">
       <DependentUpon>GLViewport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Form\EoFormCaption.cs">
+    <Compile Include="GUI\Controls\Form\EoFormCaption.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Form\EoFormCaption.designer.cs">
+    <Compile Include="GUI\Controls\Form\EoFormCaption.designer.cs">
       <DependentUpon>EoFormCaption.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Form\EoFormControlBox.cs">
+    <Compile Include="GUI\Controls\Form\EoFormControlBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Form\EoFormControlBox.designer.cs">
+    <Compile Include="GUI\Controls\Form\EoFormControlBox.designer.cs">
       <DependentUpon>EoFormControlBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Button\EoButton.cs">
+    <Compile Include="GUI\Controls\Button\EoButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Button\EoButton.Designer.cs">
+    <Compile Include="GUI\Controls\Button\EoButton.Designer.cs">
       <DependentUpon>EoButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Form\EoForm.cs">
+    <Compile Include="GUI\Controls\Form\EoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\Form\EoForm.Designer.cs">
+    <Compile Include="GUI\Controls\Form\EoForm.Designer.cs">
       <DependentUpon>EoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Event\EoDelegate.cs" />
@@ -94,7 +98,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\OpenGL\Object\Polygon\GLRect2D.cs" />
     <Compile Include="Util\ProcessChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,16 +105,16 @@
     <EmbeddedResource Include="GUI\OpenGL\Viewport\GLViewport.resx">
       <DependentUpon>GLViewport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Form\EoFormCaption.resx">
+    <EmbeddedResource Include="GUI\Controls\Form\EoFormCaption.resx">
       <DependentUpon>EoFormCaption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Form\EoFormControlBox.resx">
+    <EmbeddedResource Include="GUI\Controls\Form\EoFormControlBox.resx">
       <DependentUpon>EoFormControlBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Button\EoButton.resx">
+    <EmbeddedResource Include="GUI\Controls\Button\EoButton.resx">
       <DependentUpon>EoButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Form\EoForm.resx">
+    <EmbeddedResource Include="GUI\Controls\Form\EoForm.resx">
       <DependentUpon>EoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -120,6 +123,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Resources\normalize00_10x10_dim.png" />
   </ItemGroup>
   <ItemGroup>
@@ -161,7 +165,13 @@
   <ItemGroup>
     <None Include="Resources\minimize00_10x10_sel.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GUI\DirectX\Viewport\" />
+    <Folder Include="GUI\OpenGL\Object\Poligon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg_04.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

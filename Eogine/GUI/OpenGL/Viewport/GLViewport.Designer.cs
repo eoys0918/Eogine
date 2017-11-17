@@ -35,7 +35,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "GLViewport";
+            this.Load += new System.EventHandler(this.GLViewport_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.GLViewport_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GLViewport_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GLViewport_KeyUp);
             this.ResumeLayout(false);
 
         }

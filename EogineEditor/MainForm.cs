@@ -15,6 +15,8 @@ namespace EogineEditor
         public MainForm()
         {
             InitializeComponent();
+            this.glViewport.ViewportCam.SetPosition(0.0f, 100.0f, -100.0f);
+            this.glViewport.Start();
         }
     }
 }

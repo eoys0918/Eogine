@@ -113,6 +113,16 @@ namespace Eogine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_bg_04 {
+            get {
+                object obj = ResourceManager.GetObject("login_bg_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximize00_10x10_dim {
             get {
                 object obj = ResourceManager.GetObject("maximize00_10x10_dim", resourceCulture);
