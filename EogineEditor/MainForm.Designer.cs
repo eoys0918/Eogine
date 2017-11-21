@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Eogine.GLCamera glCamera1 = new Eogine.GLCamera();
             this.borderPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.glViewport = new Eogine.GLViewport();
@@ -70,7 +69,6 @@
             this.glViewport.Name = "glViewport";
             this.glViewport.Size = new System.Drawing.Size(977, 667);
             this.glViewport.TabIndex = 0;
-            this.glViewport.ViewportCam = glCamera1;
             this.glViewport.VSync = false;
             // 
             // MainForm

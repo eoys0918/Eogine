@@ -10,8 +10,14 @@ namespace Eogine
     public class EoEventControler
     {
         #region Key 이벤트
-        private Hashtable keySetting = new Hashtable();
-        private Hashtable keyEvents = new Hashtable();
+        private Hashtable keySetting = null;
+        private Hashtable keyEvents = null;
+
+        public EoEventControler()
+        {
+            keySetting = new Hashtable();
+            keyEvents = new Hashtable();
+        }
 
         public void SetKey(object keyName, Keys keyValue)
         {

@@ -53,10 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container\EoContainer.cs" />
     <Compile Include="Event\EoEventControler.cs" />
+    <Compile Include="Event\EoKeyEvent.cs" />
     <Compile Include="GUI\OpenGL\Component\GLComponent.cs" />
-    <Compile Include="GUI\OpenGL\Component\GLComponentManager.cs" />
-    <Compile Include="GUI\OpenGL\Component\Move\GLMoveControl.cs" />
+    <Compile Include="GUI\OpenGL\Component\Move\GLMove.cs" />
     <Compile Include="GUI\OpenGL\Object\Camera\GLCamera.cs" />
     <Compile Include="GUI\OpenGL\Object\GLObject.cs" />
     <Compile Include="GUI\OpenGL\Object\Grid\GLGrid.cs" />

@@ -18,6 +18,35 @@ namespace Eogine
         private Matrix4 projection;
         private Matrix4 modelview;
 
+        private EoContainer<GLObject> mObjectContainer = null;
+        //private EoContainer<GLCamera> mCameraContainer = null;
+
+        private GLGrid mGrid = null;
+        private GLCamera mViewportCamera = null;
+
+        private bool updateViewport = false;
+        private bool updateProjection = false;
+        private bool updateView = false;
+
+        #region 속성
+        [Category("GLViewport"), Description("Background Color")]
+        public Color BackgroundColor
+        {
+            get { return this.BackColor; }
+            set { this.BackColor = value; }
+        }
+        [Category("GLViewport"), Description("Grid")]
+        public GLGrid Grid
+        {
+            get { return this.mGrid; }
+        }
+        [Category("GLViewport"), Description("Viewport Camera")]
+        public GLCamera ViewportCam
+        {
+            get { return this.mViewportCamera; }
+        }
+        #endregion
+
         public GLViewport()
         {
             InitializeComponent();
@@ -25,88 +54,9 @@ namespace Eogine
 
         private void GLViewport_Load(object sender, EventArgs e)
         {
-            this.ObjectList.Add(this.Grid);
+            InitObject();
+            InitCamera();
         }
-        #region Grid(test)
-        private GLGrid mGrid = null;
-        public GLGrid Grid
-        {
-            get
-            {
-                if (this.mGrid == null)
-                {
-                    this.mGrid = new GLGrid();
-                }
-                return this.mGrid;
-            }
-        }
-        #endregion
-
-        #region 속성
-        [Category("GLViewport"), Description("Background Color")]
-        public Color BackgroundColor
-        {
-            get { return this.BackColor; }
-            set
-            {
-                this.BackColor = value;
-            }
-        }
-        #endregion
-
-        #region Objects
-        private List<GLObject> mObjList = null;
-        [Category("GLViewport"), Description("Object List")]
-        public List<GLObject> ObjectList
-        {
-            get
-            {
-                if (this.mObjList == null)
-                {
-                    this.mObjList = new List<GLObject>();
-                }
-                return this.mObjList;
-            }
-        }
-        #endregion
-
-        #region Cameras
-        [Category("GLViewport"), Description("Camera List")]
-        public List<GLCamera> Cameralist
-        {
-            get
-            {
-                if (this.mCamList == null)
-                {
-                    this.mCamList = new List<GLCamera>();
-                }
-                return this.mCamList;
-            }
-        }
-        private List<GLCamera> mCamList = null;
-
-        [Category("GLViewport"), Description("ViewportCam")]
-        public GLCamera ViewportCam
-        {
-            get
-            {
-                if (this.mViewportCam == null)
-                {
-                    SetViewportCam(new GLCamera());
-                }
-                return this.mViewportCam;
-            }
-            set { SetViewportCam(value); }
-        }
-        private GLCamera mViewportCam = null;
-        private void SetViewportCam(GLCamera camera)
-        {
-            this.mViewportCam = camera;
-            this.mViewportCam.updateProjection += new EoDelegate.Void(UpdateProjection);
-            this.mViewportCam.updateView += new EoDelegate.Void(UpdateView);
-        }
-
-        #endregion
 
         public void Start()
         {
@@ -120,29 +70,6 @@ namespace Eogine
             trigger.Start();
         }
 
-        public void UpdateProjection()
-        {
-            updateProjection = true;
-        }
-
-        public void UpdateView()
-        {
-            updateView = true;
-        }
-
-        private void UpdateViewport(object sender, ElapsedEventArgs e)
-        {
-            ViewportCam.Update();
-            foreach (GLObject obj in ObjectList)
-            {
-                obj.Update();
-            }
-            this.Refresh();
-        }
-
-        private bool updateViewport = false;
-        private bool updateProjection = false;
-        private bool updateView = false;
         private void RenderViewport()
         {
             try
@@ -154,14 +81,14 @@ namespace Eogine
                 }
                 if (updateProjection)
                 {
-                    projection = mViewportCam.GetProjection();
+                    projection = ViewportCam.GetProjection();
                     GL.MatrixMode(MatrixMode.Projection);
                     GL.LoadMatrix(ref projection);
                     updateProjection = false;
                 }
                 if (updateView)
                 {
-                    modelview = mViewportCam.GetView();
+                    modelview = ViewportCam.GetView();
                     GL.MatrixMode(MatrixMode.Modelview);
                     GL.LoadMatrix(ref modelview);
                     updateView = false;
@@ -169,16 +96,59 @@ namespace Eogine
                 GL.ClearColor(this.BackColor);
                 GL.ClearDepth(1);
                 GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-                foreach (GLObject obj in ObjectList)
-                {
-                    obj.Render();
-                }
+
+                this.mObjectContainer.Update();
+
                 this.SwapBuffers();
             }
             catch (System.Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+       
+
+        #region GLObject
+        private void InitObject()
+        {
+            this.mObjectContainer = new EoContainer<GLObject>();
+            this.mObjectContainer.eventUpdate += new EoDelegate.Void<GLObject>(UpdateObject);
+
+            this.mGrid = new GLGrid();
+            this.mObjectContainer.Add("Grid", this.mGrid);
+        }
+        private void UpdateObject(GLObject glObject)
+        {
+            if (glObject != null)
+            {
+                glObject.Update();
+            }
+        }
+        #endregion
+
+        #region GLCamera
+        private void InitCamera()
+        {
+            this.mViewportCamera = new GLCamera();
+            this.mViewportCamera.eventUpdateProjection += new EoDelegate.Void(UpdateProjection);
+            this.mViewportCamera.eventUpdateView += new EoDelegate.Void(UpdateView);
+            this.mObjectContainer.Add("ViewportCamera", this.mViewportCamera);
+        }
+        public void UpdateProjection()
+        {
+            updateProjection = true;
+        }
+        public void UpdateView()
+        {
+            updateView = true;
+        }
+        #endregion
+
+
+        private void UpdateViewport(object sender, ElapsedEventArgs e)
+        {
+            this.Refresh();
         }
 
         private void GLViewport_Paint(object sender, PaintEventArgs e)
@@ -188,18 +158,18 @@ namespace Eogine
 
         private void GLViewport_KeyDown(object sender, KeyEventArgs e)
         {
-            if (ViewportCam.CameraControl != null)
-            {
-                ViewportCam.CameraControl.EventController.KeyDown(sender, e);
-            }
+            //if (ViewportCam.CameraControl != null)
+            //{
+            //    ViewportCam.CameraControl.EventController.KeyDown(sender, e);
+            //}
         }
 
         private void GLViewport_KeyUp(object sender, KeyEventArgs e)
         {
-            if (ViewportCam.CameraControl != null)
-            {
-                ViewportCam.CameraControl.EventController.KeyUp(sender, e);
-            }
+            //if (ViewportCam.CameraControl != null)
+            //{
+            //    ViewportCam.CameraControl.EventController.KeyUp(sender, e);
+            //}
         }
     }
 }

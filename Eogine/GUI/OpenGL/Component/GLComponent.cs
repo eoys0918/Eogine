@@ -6,52 +6,52 @@ using System.Text;
 namespace Eogine
 {
     public abstract class GLComponent
-    {
-        protected GLObject glObject = null;
-
+    {   
         public enum TYPE
         {
-            MOVE_CONTROL,
-            COMPONENT
+            MOVE,
         }
-        private GLComponent.TYPE mComponentType = TYPE.COMPONENT;
+        private GLComponent.TYPE mComponentType;
         public GLComponent.TYPE ComponentType { get { return this.mComponentType; } }
 
-        private EoEventControler mEventController = null;
-        public EoEventControler EventController 
-        {
-            get 
-            {
-                if (this.mEventController == null)
-                {
-                    this.mEventController = new EoEventControler();
-                }
-                return this.mEventController; 
-            } 
-        }
+        protected GLObject glObject = null;
 
+        private bool isUpdate = false;
+        
         public GLComponent(TYPE type, GLObject glObject)
         {
-            this.glObject = glObject;
             this.mComponentType = type;
+            this.glObject = glObject;
         }
 
         public event EoDelegate.Void eventBeforeUpdate;
         public event EoDelegate.Void eventAfterUpdate;
+        protected abstract void _Update();
         public void Update()
         {
-            if (eventBeforeUpdate != null)
+            if (this.isUpdate)
             {
-                eventBeforeUpdate();
+                if (eventBeforeUpdate != null)
+                {
+                    eventBeforeUpdate();
+                }
+                _Update();
+                if (eventAfterUpdate != null)
+                {
+                    eventAfterUpdate();
+                }
             }
-            if (mEventController != null)
-            {
-                mEventController.UpdateEvent();
-            }
-            if (eventAfterUpdate != null)
-            {
-                eventAfterUpdate();
-            }
+            
+        }
+
+        public void Start()
+        {
+            this.isUpdate = true;
+        }
+
+        public void Stop()
+        {
+            this.isUpdate = false;
         }
     }
 }

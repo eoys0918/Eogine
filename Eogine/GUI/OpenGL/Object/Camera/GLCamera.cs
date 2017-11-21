@@ -10,91 +10,33 @@ namespace Eogine
 {
     public class GLCamera : GLObject
     {
-        private bool mControlEnable = false;
-        public bool ControlEnable
-        {
-            get
-            {
-                return this.mControlEnable;
-            }
-            set
-            {
-                if(this.mControlEnable = value)
-                {
-                    if (CameraControl == null)
-                    {
-                        GLComponents.SetComponent(new GLMoveControl(this));
-                        CameraControl.eventAfterUpdate += new EoDelegate.Void(UpdateView);
-                    }
-                    else
-                    {
-                        GLComponents.RemoveComponent(GLComponent.TYPE.MOVE_CONTROL);
-                    }
-                       
-                }
-            }
-        }
-        public GLComponent CameraControl
-        {
-            get { return GLComponents.GetComponent(GLComponent.TYPE.MOVE_CONTROL); }
-        }
-
-        public GLCamera()
-        {
-            InitCamera();
-            
-        }
-
-        private void InitCamera()
-        {
-            InitProjection();
-            
-        }
-
-        #region View
-        public Matrix4 GetView()
-        {
-            UpdateVector();
-            return Matrix4.LookAt(this.position, this.target, this.vUp);
-        }
-        public event EoDelegate.Void updateView;
-        private void UpdateView()
-        {
-            if(updateView != null)
-            {
-                updateView();
-            }
-        }
-        
-        #endregion
-
-        #region Projection       
-
         /// <summary>
         /// 시야각
         /// </summary>
-        private float fovy;
+        private float fovy = MathHelper.PiOver4;
         /// <summary>
         /// 종횡비
         /// </summary>
-        private float aspect;
+        private float aspect = 1.0f;
         /// <summary>
         /// near
         /// </summary>
-        private float zNear;
+        private float zNear = 0.0001f;
         /// <summary>
         /// far
         /// </summary>
-        private float zFar;
+        private float zFar = 1000.0f;
 
-        private void InitProjection()
+        public GLCamera()
         {
-            this.fovy = MathHelper.PiOver4;
-            this.aspect = 1.0f;
-            this.zNear = 0.0001f;
-            this.zFar = 1000.0f;
+            this.renderEnable = false;
         }
-
+        
+        #region Projection
+        public Matrix4 GetProjection()
+        {
+            return Matrix4.CreatePerspectiveFieldOfView(this.fovy, this.aspect, this.zNear, this.zFar);
+        }
         public void SetProjection(float fovy, float aspect, float zNear, float zFar)
         {
             this.fovy = fovy;
@@ -102,7 +44,6 @@ namespace Eogine
             this.zNear = zNear;
             this.zFar = zFar;
         }
-
         public void SetFovY(float degree)
         {
             this.fovy = MathHelper.DegreesToRadians(degree);
@@ -128,20 +69,31 @@ namespace Eogine
             this.zFar = far;
         }
 
-        public Matrix4 GetProjection()
-        {
-            return Matrix4.CreatePerspectiveFieldOfView(this.fovy, this.aspect, this.zNear, this.zFar);
-        }
-
-        public event EoDelegate.Void updateProjection;
+        public event EoDelegate.Void eventUpdateProjection;
         private void UpdateProjection()
         {
-            if(updateProjection != null)
+            if (eventUpdateProjection != null)
             {
-                updateProjection();
+                eventUpdateProjection();
             }
         }
+        #endregion
 
+        #region View
+        public Matrix4 GetView()
+        {
+            UpdateVector();
+            return Matrix4.LookAt(this.position, this.target, this.vUp);
+        }
+
+        public event EoDelegate.Void eventUpdateView;
+        private void UpdateView()
+        {
+            if (eventUpdateView != null)
+            {
+                eventUpdateView();
+            }
+        }
         #endregion
     }
 }

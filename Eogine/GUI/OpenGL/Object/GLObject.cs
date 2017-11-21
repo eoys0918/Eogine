@@ -9,54 +9,30 @@ namespace Eogine
 {
     public abstract class GLObject
     {
-        public GLComponentManager GLComponents = new GLComponentManager();
+        public bool renderEnable = true;
 
-        protected Vector3 size = Vector3.Zero;
+        public Vector3 position = Vector3.Zero;
+        public Vector3 target = Vector3.Zero;
 
+        public Vector3 vDir;
+        public Vector3 vRight;
+        public Vector3 vUp;
+
+        public Vector3 size = Vector3.Zero;
+
+        protected EoContainer<GLComponent> componentContainer = null;
+        
 
         public GLObject()
         {
+            componentContainer = new EoContainer<GLComponent>();
             UpdateVector();
             RenderType = PrimitiveType.Triangles;
         }
 
-        #region position
-
-        public Vector3 position = Vector3.Zero;
-        public void SetPosition(Vector3 position)
-        {
-            this.position = position;
-        }
-        public void SetPosition(float x, float y, float z = 0.0f)
-        {
-            this.position.X = x;
-            this.position.Y = y;
-            this.position.Z = z;
-        }
-
-        #endregion
-
-        #region target
-
-        public Vector3 target = Vector3.Zero;
-        public void SetTarget(Vector3 target)
-        {
-            this.target = target;
-        }
-        public void SetTarget(float x, float y, float z = 0.0f)
-        {
-            this.target.X = x;
-            this.target.Y = y;
-            this.target.Z = z;
-        }
-
-        #endregion
+        
 
         #region vector
-        protected float speed = 5.0f;
-        public Vector3 vDir;
-        public Vector3 vRight;
-        public Vector3 vUp;
         protected void UpdateVector()
         {
             this.vDir = this.target - this.position;
@@ -97,24 +73,23 @@ namespace Eogine
 
         protected bool updateVertices = false;
 
-        protected event EoDelegate.Void eventBeforeUpdate;
-        protected event EoDelegate.Void eventAfterUpdate;
+        protected event EoDelegate.Void eventUpdateBeforeRender;
+        protected event EoDelegate.Void eventUpdateAfterRender;
         public void Update()
         {
-            if (eventBeforeUpdate!=null)
+            if (eventUpdateBeforeRender!=null)
             {
-                eventBeforeUpdate();
+                eventUpdateBeforeRender();
             }
-
-            this.GLComponents.UpdateComponents();
-
-            if (eventAfterUpdate != null)
+            Render();
+            if (eventUpdateAfterRender != null)
             {
-                eventAfterUpdate();
+                eventUpdateAfterRender();
             }
         }
-        public void Render()
+        private void Render()
         {
+            if (!this.renderEnable) return;
             try
             {
                 if (updateVertices)
