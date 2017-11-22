@@ -50,12 +50,12 @@ namespace Eogine
         public GLViewport()
         {
             InitializeComponent();
+            InitObject();
+            InitCamera();
         }
 
         private void GLViewport_Load(object sender, EventArgs e)
-        {
-            InitObject();
-            InitCamera();
+        {            
         }
 
         public void Start()

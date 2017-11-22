@@ -16,13 +16,14 @@ namespace EogineEditor
         public MainForm()
         {
             InitializeComponent();
+            InitViewport();
         }
         
         #region 화면 로드
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            InitViewport();
+            
             
         }
 
