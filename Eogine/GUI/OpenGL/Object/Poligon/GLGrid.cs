@@ -62,10 +62,10 @@ namespace Eogine
         public GLGrid()
         {
             //texture = new GLTexture(global::Eogine.Properties.Resources.login_bg_04);
-            GridCountWidth = 10;
-            GridCountHeight = 10;
-            GridSizeWidth = 10.0f;
-            GridSizeHeight = 10.0f;
+            GridCountWidth = 20;
+            GridCountHeight = 20;
+            GridSizeWidth = 5.0f;
+            GridSizeHeight = 5.0f;
             SetGridType(TYPE.Line);
         }
 

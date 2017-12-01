@@ -58,9 +58,12 @@
     <Compile Include="Event\EoKeyEvent.cs" />
     <Compile Include="GUI\OpenGL\Component\GLComponent.cs" />
     <Compile Include="GUI\OpenGL\Component\Move\GLMove.cs" />
+    <Compile Include="GUI\OpenGL\Control\GLEventControler.cs" />
+    <Compile Include="GUI\OpenGL\Control\Keyboard\GLKeyboard.cs" />
+    <Compile Include="GUI\OpenGL\Control\Mouse\GLMouse.cs" />
     <Compile Include="GUI\OpenGL\Object\Camera\GLCamera.cs" />
     <Compile Include="GUI\OpenGL\Object\GLObject.cs" />
-    <Compile Include="GUI\OpenGL\Object\Grid\GLGrid.cs" />
+    <Compile Include="GUI\OpenGL\Object\Poligon\GLGrid.cs" />
     <Compile Include="GUI\OpenGL\Render\GLTexture.cs" />
     <Compile Include="GUI\OpenGL\Render\GLVertex.cs" />
     <Compile Include="GUI\OpenGL\Viewport\GLViewport.cs">
@@ -168,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\DirectX\Viewport\" />
-    <Folder Include="GUI\OpenGL\Object\Poligon\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login_bg_04.png" />

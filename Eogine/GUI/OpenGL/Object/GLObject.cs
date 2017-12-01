@@ -9,7 +9,8 @@ namespace Eogine
 {
     public abstract class GLObject
     {
-        public bool renderEnable = true;
+        public bool Enabled = true;
+        public bool RenderEnabled = true;
 
         public Vector3 position = Vector3.Zero;
         public Vector3 target = Vector3.Zero;
@@ -20,17 +21,16 @@ namespace Eogine
 
         public Vector3 size = Vector3.Zero;
 
-        protected EoContainer<GLComponent> componentContainer = null;
-        
+        protected EoContainer<GLObject> childs = null;
+        protected EoContainer<GLComponent> components = null;
+        protected EoContainer<GLControl> controls = null;
 
         public GLObject()
         {
-            componentContainer = new EoContainer<GLComponent>();
-            UpdateVector();
             RenderType = PrimitiveType.Triangles;
+            UpdateVector();
+            components = new EoContainer<GLComponent>();
         }
-
-        
 
         #region vector
         protected void UpdateVector()
@@ -77,19 +77,22 @@ namespace Eogine
         protected event EoDelegate.Void eventUpdateAfterRender;
         public void Update()
         {
-            if (eventUpdateBeforeRender!=null)
+            if (this.Enabled)
             {
-                eventUpdateBeforeRender();
-            }
-            Render();
-            if (eventUpdateAfterRender != null)
-            {
-                eventUpdateAfterRender();
+                if (eventUpdateBeforeRender != null)
+                {
+                    eventUpdateBeforeRender();
+                }
+                Render();
+                if (eventUpdateAfterRender != null)
+                {
+                    eventUpdateAfterRender();
+                }
             }
         }
         private void Render()
         {
-            if (!this.renderEnable) return;
+            if (!this.RenderEnabled) return;
             try
             {
                 if (updateVertices)

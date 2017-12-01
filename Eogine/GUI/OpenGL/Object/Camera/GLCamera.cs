@@ -29,7 +29,7 @@ namespace Eogine
 
         public GLCamera()
         {
-            this.renderEnable = false;
+            this.RenderEnabled = false;
         }
         
         #region Projection
